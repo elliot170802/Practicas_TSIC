@@ -249,8 +249,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mObserverBehaviour: {fileID: 876023088}
   mHiddenRoot: {fileID: 0}
-  mTargetName: 81053
-  mDatasetName: Vuforia/Clase_AR.xml
+  mTargetName: Astronaut
+  mDatasetName: Vuforia/VuforiaMars_Images.xml
   mCastedBehaviour: {fileID: 876023088}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
@@ -313,13 +313,13 @@ MonoBehaviour:
   PreviewVisible: 1
   RuntimeOcclusion: 0
   RuntimeCollider: 0
-  mTrackableName: 81053
+  mTrackableName: Astronaut
   mInitializedInEditor: 1
-  mDataSetPath: Vuforia/Clase_AR.xml
-  mAspectRatio: 0.999786
+  mDataSetPath: Vuforia/VuforiaMars_Images.xml
+  mAspectRatio: 1.7272727
   mImageTargetType: 0
-  mWidth: 1
-  mHeight: 0.999786
+  mWidth: 0.06985
+  mHeight: 0.12065
   mRuntimeTexture: {fileID: 0}
   mMotionHint: 1
   mTrackingOptimization: 0
