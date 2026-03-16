@@ -1,36 +1,59 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeColor : MonoBehaviour
-{   
+{
     public GameObject model;
     public Color color;
     public Material colorMaterial;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject[] accesorios; 
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    // Mantiene la funcionalidad de cambiar color del modelo base
     public void ChangeColor_BTN()
     {
-    
-    Renderer rend = model.GetComponentInChildren<Renderer>();
-
+        Renderer rend = model.GetComponentInChildren<Renderer>();
         if (rend != null)
         {
             rend.material.color = color;
-            Debug.Log("Color cambiado exitosamente.");
-        }
-        else
-        {
-            Debug.LogError("No se encontró ningún componente Renderer en el modelo o sus hijos.");
+            colorMaterial.color = color;
         }
     }
+
+    // Función para accesorios aleatorios (la que ya tienes)
+    public void AddRandomAccessory_BTN()
+    {
+        foreach (GameObject acc in accesorios)
+        {
+            if (acc != null) acc.SetActive(false);
+        }
+
+        if (accesorios.Length > 0)
+        {
+            int indexAleatorio = UnityEngine.Random.Range(0, accesorios.Length);
+            accesorios[indexAleatorio].SetActive(true);
+        }
+    }
+
+    // --- NUEVA FUNCIÓN: CAMBIA EL COLOR DEL ACCESORIO ACTIVO ---
+    public void ChangeAccessoryColor_BTN()
+{
+    foreach (GameObject acc in accesorios)
+    {
+        // Solo actuamos sobre el accesorio que esté visible
+        if (acc != null && acc.activeSelf)
+        {
+            // CAMBIO AQUÍ: Obtenemos TODOS los renderers del accesorio y sus hijos
+            Renderer[] rends = acc.GetComponentsInChildren<Renderer>();
+            
+            // Creamos un color aleatorio (RGBA)
+            Color randomColor = new Color(Random.value, Random.value, Random.value, 1.0f);
+            
+            // Aplicamos el color a cada pieza encontrada
+            foreach (Renderer r in rends)
+            {
+                r.material.color = randomColor;
+            }
+            Debug.Log("Todo el accesorio cambió a: " + randomColor);
+        }
+    }
+}
 }
