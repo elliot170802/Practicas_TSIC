@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="piedra" size="1.000000 0.666667" />
+    <ImageTarget name="hojas" size="1.000000 0.667333" />
+    <ImageTarget name="art" size="1.000000 0.666667" />
     <ImageTarget name="81053" size="1.000000 0.999786" />
   </Tracking>
 </QCARConfig>
