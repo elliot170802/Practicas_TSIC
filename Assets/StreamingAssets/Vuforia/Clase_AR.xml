@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
-    <ImageTarget name="piedra" size="1.000000 0.666667" />
-    <ImageTarget name="hojas" size="1.000000 0.667333" />
-    <ImageTarget name="art" size="1.000000 0.666667" />
-    <ImageTarget name="81053" size="1.000000 0.999786" />
+    <ImageTarget name="marcador1_elliot_alvarado" size="1.000000 0.667333" />
+    <ImageTarget name="marcador4_elliot_alvarado" size="1.000000 1.782531" />
+    <ImageTarget name="marcador5_elliot_alvarado" size="1.000000 0.666667" />
+    <ImageTarget name="marcador3_elliot_alvarado" size="1.000000 0.666667" />
+    <ImageTarget name="marcador2_elliot_alvarado" size="1.000000 1.000000" />
   </Tracking>
 </QCARConfig>
